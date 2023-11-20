@@ -1,9 +1,8 @@
 import {fromEvent} from "rxjs";
-import {filter, map} from "rxjs/operators";
+import {map} from "rxjs/operators";
 
 const keyUp$ = fromEvent<KeyboardEvent>(document, 'keyup').pipe(
-    map(event => event.code),
-    filter(code => code === 'Enter')
+    map( event => event.code)
 );
 
 keyUp$.subscribe(console.log);
