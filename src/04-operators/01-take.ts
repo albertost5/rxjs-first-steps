@@ -1,4 +1,4 @@
-import { of, take, tap } from "rxjs";
+import {of, take} from "rxjs";
 
 
 const numbers$ = of(1, 2, 3, 4, 5);
